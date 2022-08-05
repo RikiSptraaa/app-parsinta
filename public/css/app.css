@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+    color: white;
+    padding: 20px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.navbar {
+    display: flex;
+    list-style-type: none;
+    margin-bottom: 20px;
+}
+
+.navbar li a {
+    padding: 0 20px;
+}
+
+.alert {
+    background: indigo;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.create-task {
+    margin-bottom: 20px;
+}
