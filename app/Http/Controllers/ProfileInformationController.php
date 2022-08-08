@@ -8,6 +8,6 @@ class ProfileInformationController extends Controller
 {
     public function __invoke($name)
     {
-        return view('profile', ['name' => $name]);
+        return view('profile', ['name' => $name,]);
     }
 }
