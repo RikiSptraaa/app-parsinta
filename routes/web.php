@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileInformationController;
 use App\Http\Controllers\TaskController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,11 +20,14 @@ use App\Http\Controllers\TaskController;
 */
 
 Route::get('/', HomeController::class);
-Route::get('/task/{id}/edit', [TaskController::class, 'edit']);
-Route::put('/task/{id}', [TaskController::class, 'update']);
-Route::delete('/task/{id}', [TaskController::class, 'delete']);
-Route::get('/task', [TaskController::class, 'index']);
-Route::post('/task', [TaskController::class, 'store']);
-Route::get('/profile/{name}', ProfileInformationController::class);
-Route::get('/contact', [ContactController::class, 'create']);
-Route::post('/contact', [ContactController::class, 'store']);
+Route::get('users', [UserController::class, 'index']);
+Route::get('users/{user:id}', [UserController::class, 'show']);
+Route::resource('tasks', TaskController::class);
+// Route::get('/task/{id}/edit', [TaskController::class, 'edit']);
+// Route::put('/task/{id}', [TaskController::class, 'update']);
+// Route::delete('/task/{id}', [TaskController::class, 'delete']);
+// Route::get('/task', [TaskController::class, 'index']);
+// Route::post('/task', [TaskController::class, 'store']);
+// Route::get('/profile/{name}', ProfileInformationController::class);
+// Route::get('/contact', [ContactController::class, 'create']);
+// Route::post('/contact', [ContactController::class, 'store']);
